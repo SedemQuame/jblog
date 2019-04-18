@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="700.0"
+            prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #FFFFFF;"
+            stylesheets="@../stylesheets/blogPage.css" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="sample.controllers.storyPageController">
+    <top>
+        <HBox id="header" prefHeight="50.0" prefWidth="1100.0" stylesheets="@../stylesheets/general.css"
+              BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="100.0" right="100.0" top="10.0"/>
+            </padding>
+            <children>
+                <Label prefHeight="40.0" prefWidth="100.0" text="JBLOG" textFill="WHITE">
+                    <font>
+                        <Font name="Bank Gothic Medium BT" size="25.0"/>
+                    </font>
+                </Label>
+                <Separator minWidth="2.0" orientation="VERTICAL" prefHeight="200.0">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </Separator>
+                <Label prefHeight="40.0" prefWidth="700.0" text="Story Board" textFill="WHITE">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </Label>
+                <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="100.0" text="Home"
+                       textFill="WHITE">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <HBox prefHeight="650.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+            <children>
+                <ScrollPane hbarPolicy="NEVER" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: white;"
+                            stylesheets="@../stylesheets/storyPage.css" vbarPolicy="NEVER" HBox.hgrow="NEVER">
+                    <content>
+                        <VBox prefHeight="650.0" prefWidth="900.0" spacing="5.0" style="-fx-background-color: white;">
+                            <children>
+                                <Label id="storyBoard" alignment="BASELINE_CENTER" prefHeight="100.0" prefWidth="900.0"
+                                       stylesheets="@../stylesheets/storyPage.css" text="Story Board"/>
+                                <Label id="pageSummary" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
+                                       maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="600.0"
+                                       stylesheets="@../stylesheets/storyPage.css"
+                                       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                                       textAlignment="CENTER" wrapText="true">
+                                    <VBox.margin>
+                                        <Insets bottom="15.0" left="150.0" right="150.0"/>
+                                    </VBox.margin>
+                                </Label>
+                                <Label layoutX="10.0" layoutY="44.0" text="Title"/>
+                                <TextField fx:id="storyTitle" maxHeight="850.0" maxWidth="790.0" prefWidth="800.0">
+                                    <VBox.margin>
+                                        <Insets bottom="7.0"/>
+                                    </VBox.margin>
+                                </TextField>
+                                <Label layoutX="10.0" layoutY="130.0" text="Category"/>
+                                <TextField fx:id="category" layoutX="10.0" layoutY="152.0" maxHeight="850.0"
+                                           maxWidth="790.0" prefWidth="800.0"/>
+                                <Label layoutX="10.0" layoutY="61.0" text="Introduction"/>
+                                <TextArea fx:id="introduction" maxHeight="850.0" maxWidth="850.0" prefHeight="200.0"
+                                          prefWidth="850.0">
+                                    <VBox.margin>
+                                        <Insets bottom="7.0"/>
+                                    </VBox.margin>
+                                </TextArea>
+                                <Label layoutX="10.0" layoutY="103.0" text="Body"/>
+                                <TextArea fx:id="body" layoutX="10.0" layoutY="120.0" maxHeight="850.0" maxWidth="850.0"
+                                          prefHeight="200.0" prefWidth="850.0">
+                                    <VBox.margin>
+                                        <Insets bottom="7.0"/>
+                                    </VBox.margin>
+                                </TextArea>
+                                <Label layoutX="10.0" layoutY="320.0" text="Conclusion"/>
+                                <TextArea fx:id="conclusion" layoutX="10.0" layoutY="337.0" maxWidth="850.0"
+                                          prefHeight="200.0" prefWidth="850.0">
+                                    <VBox.margin>
+                                        <Insets bottom="7.0"/>
+                                    </VBox.margin>
+                                </TextArea>
+                                <Label layoutX="10.0" layoutY="61.0" text="Image Url"/>
+                                <TextField fx:id="imageUrl" layoutX="10.0" layoutY="78.0" maxHeight="850.0"
+                                           maxWidth="850.0" prefWidth="850.0"/>
+                                <Button fx:id="submitStory" alignment="BASELINE_CENTER" mnemonicParsing="false"
+                                        onAction="#addNewStoryToDatabase" prefWidth="120.0"
+                                        styleClass="storyPageSubmitBtn" stylesheets="@../stylesheets/storyPage.css"
+                                        text="Upload Story">
+                                    <VBox.margin>
+                                        <Insets left="380.0" top="10.0"/>
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets bottom="70.0"/>
+                            </padding>
+                        </VBox>
+                    </content>
+                    <padding>
+                        <Insets left="5.0" right="5.0"/>
+                    </padding>
+                </ScrollPane>
+            </children>
+            <padding>
+                <Insets left="5.0" right="5.0"/>
+            </padding>
+            <BorderPane.margin>
+                <Insets left="100.0" right="100.0" top="5.0"/>
+            </BorderPane.margin>
+        </HBox>
+    </center>
+</BorderPane>

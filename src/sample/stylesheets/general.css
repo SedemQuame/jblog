@@ -1,0 +1,36 @@
+/* Arthur: Sedem Quame Amekpewu
+*Date: 12th April, 2019
+*Description: This is a simple CSS script, that would be used in styling
+              the blogPageController.sample.fxml markup file.
+              Coloring scheme will be taking from adobe color.
+*/
+#header {
+    -fx-background-color: #FF775F;
+    -fx-text-fill: #FFFFFF;
+    /*-fx-font-family: ;*/
+}
+
+#body {
+    -fx-background-color: #FFFFFF;
+}
+
+.sectionHeaders {
+    -fx-text-fill: #FF775F;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.signupButtons {
+    -fx-background-color: #FF775F;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    /*-fx-font-family: ;*/
+}
+
+.signupButtons:hover {
+    -fx-background-color: #FF9683;
+}
+
+/*#signUpImageView{*/
+/*-fx-background-image: url("./image/heart.svg");*/
+/*}*/

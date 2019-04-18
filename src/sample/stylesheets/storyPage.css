@@ -1,0 +1,21 @@
+.storyPageSubmitBtn {
+    -fx-background-color: #FF775F;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    /*-fx-font-family: ;*/
+}
+
+.storyPageSubmitBtn:hover {
+    -fx-background-color: #FF9683;
+}
+
+#storyBoard {
+    -fx-text-fill: #222f3e;
+    -fx-font-size: 24px;
+    /*-fx-font-family: ;*/
+}
+
+#pageSummary {
+    -fx-text-fill: #576574;
+    -fx-font-size: 14px;
+}
