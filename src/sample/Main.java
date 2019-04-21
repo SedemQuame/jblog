@@ -11,7 +11,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        //        Creating a new source object.
+//                Creating a new source object.
         sample.model.Datasource source = new sample.model.Datasource();
 
 
@@ -30,6 +30,8 @@ public class Main extends Application {
 
 //        Final Statement to be run.
         source.close();
+
+
     }
 
     @Override
@@ -42,7 +44,7 @@ public class Main extends Application {
          * */
 //        Parent root = FXMLLoader.load(getClass().getResource("Main.sample.fxml"));
 
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/signupPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/storyListPage.fxml"));
 
         primaryStage.setTitle("Sign Up Page");
         primaryStage.setScene(new Scene(root, 1100, 700));

@@ -1,6 +1,5 @@
 package sample.model;
 
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -247,7 +246,7 @@ public class Datasource {
         story.setIntroduction(results.getString(COLUMN_INTRODUCTION));
         story.setBody(results.getString(COLUMN_BODY));
         story.setConclusion(results.getString(COLUMN_CONCLUSION));
-        story.setArthurId(results.getInt(COLUMN_IMAGEURL));
+        story.setImageUrl(results.getString(COLUMN_IMAGEURL));
         story.setStoryId(results.getInt(COLUMN_STORYID));
         return story;
     }

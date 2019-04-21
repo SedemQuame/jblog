@@ -1,8 +1,8 @@
 package sample.model;
 
 public class Story {
-    private String title, category, introduction, body, conclusion;
-    private int arthurId, storyId;
+    private String title, category, introduction, body, conclusion, imageUrl;
+    private int storyId;
 
 
     /*Overloading Constructor*/
@@ -10,13 +10,13 @@ public class Story {
 
     }
 
-    public Story(String title, String category, String introduction, String body, String conclusion, int arthurId, int storyId) {
+    public Story(String title, String category, String introduction, String body, String conclusion, String imageUrl, int storyId) {
         this.title = title;
         this.category = category;
         this.introduction = introduction;
         this.body = body;
         this.conclusion = conclusion;
-        this.arthurId = arthurId;
+        this.imageUrl = imageUrl;
         this.storyId = storyId;
     }
 
@@ -60,12 +60,12 @@ public class Story {
         this.conclusion = conclusion;
     }
 
-    public int getArthurId() {
-        return arthurId;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setArthurId(int arthurId) {
-        this.arthurId = arthurId;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public int getStoryId() {
