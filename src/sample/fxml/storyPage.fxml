@@ -3,7 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="700.0"
             prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #FFFFFF;"
             stylesheets="@../stylesheets/blogPage.css" xmlns="http://javafx.com/javafx/10.0.1"
@@ -15,33 +15,48 @@
                 <Insets bottom="10.0" left="100.0" right="100.0" top="10.0"/>
             </padding>
             <children>
-                <Label prefHeight="40.0" prefWidth="100.0" text="JBLOG" textFill="WHITE">
+                <Label prefHeight="30.0" prefWidth="110.0" text="JBLOG" textFill="WHITE">
                     <font>
                         <Font name="Bank Gothic Medium BT" size="25.0"/>
                     </font>
                 </Label>
-                <Separator minWidth="2.0" orientation="VERTICAL" prefHeight="200.0">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </Separator>
-                <Label prefHeight="40.0" prefWidth="700.0" text="Story Board" textFill="WHITE">
+                <Button fx:id="homepage" layoutX="216.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoHomePage"
+                        prefHeight="50.0" prefWidth="200.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Home" textFill="WHITE">
                     <font>
-                        <Font size="18.0"/>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="storyboard" mnemonicParsing="false" onAction="#gotoStoryBoardPage" prefHeight="50.0"
+                        prefWidth="200.0" styleClass="adminLinks" stylesheets="@../stylesheets/storyPage.css"
+                        text="StoryBoard" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
                     </font>
                     <HBox.margin>
-                        <Insets/>
+                        <Insets right="10.0"/>
                     </HBox.margin>
-                </Label>
-                <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="100.0" text="Home"
-                       textFill="WHITE">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
+                </Button>
+                <Button fx:id="storylist" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryListPage" prefHeight="50.0" prefWidth="200.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Stories" textFill="WHITE">
                     <font>
-                        <Font size="18.0"/>
+                        <Font name="System Bold" size="13.0"/>
                     </font>
-                </Label>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="userlist" layoutX="368.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryUserPage" prefHeight="50.0" prefWidth="200.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Users" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </Button>
             </children>
             <BorderPane.margin>
                 <Insets/>

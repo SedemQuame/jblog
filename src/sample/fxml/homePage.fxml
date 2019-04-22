@@ -21,19 +21,34 @@
                         <Font name="Bank Gothic Medium BT" size="25.0"/>
                     </font>
                 </Label>
-                <Separator minWidth="2.0" orientation="VERTICAL" prefHeight="200.0">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </Separator>
-                <Label prefHeight="40.0" prefWidth="700.0" text="Home" textFill="WHITE">
+                <Button fx:id="homepage" mnemonicParsing="false" onAction="#gotoHomePage" prefHeight="50.0"
+                        prefWidth="160.0" styleClass="adminLinks" stylesheets="@../stylesheets/storyPage.css"
+                        text="Home" textFill="WHITE">
                     <font>
-                        <Font size="18.0"/>
+                        <Font name="System Bold" size="13.0"/>
                     </font>
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </Label>
+                </Button>
+                <Button fx:id="homepage1" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoHomePage" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Tech Crunch" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="homepage11" layoutX="416.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoHomePage" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="BBC" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="homepage111" layoutX="536.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoHomePage" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="WSJ" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
             </children>
             <BorderPane.margin>
                 <Insets/>
@@ -165,7 +180,8 @@
                                                 <Insets bottom="15.0"/>
                                             </VBox.margin>
                                         </Separator>
-                                        <HBox prefHeight="80.0" prefWidth="200.0">
+                                        <HBox prefHeight="80.0" prefWidth="200.0" styleClass="highLightArticle"
+                                              stylesheets="@../stylesheets/homePage.css">
                                             <VBox.margin>
                                                 <Insets bottom="5.0" top="5.0"/>
                                             </VBox.margin>
@@ -173,7 +189,8 @@
                                                 <VBox prefHeight="80.0" prefWidth="190.0">
                                                     <children>
                                                         <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" style="-fx-text-fill: #1e272e;"
+                                                               prefWidth="190.0" styleClass="gotoBlogPage"
+                                                               stylesheets="@../stylesheets/homePage.css"
                                                                text="Article Name">
                                                             <font>
                                                                 <Font size="16.0"/>
@@ -197,13 +214,18 @@
                                                     </image>
                                                 </ImageView>
                                             </children>
+                                            <padding>
+                                                <Insets left="5.0" top="8.0"/>
+                                            </padding>
                                         </HBox>
-                                        <HBox layoutX="10.0" layoutY="123.0" prefHeight="80.0" prefWidth="200.0">
+                                        <HBox layoutX="10.0" layoutY="123.0" prefHeight="80.0" prefWidth="200.0"
+                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
                                             <children>
                                                 <VBox prefHeight="80.0" prefWidth="190.0">
                                                     <children>
                                                         <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" style="-fx-text-fill: #1e272e;"
+                                                               prefWidth="190.0" styleClass="gotoBlogPage"
+                                                               stylesheets="@../stylesheets/homePage.css"
                                                                text="Article Name">
                                                             <font>
                                                                 <Font size="16.0"/>
@@ -230,13 +252,18 @@
                                             <VBox.margin>
                                                 <Insets bottom="5.0" top="5.0"/>
                                             </VBox.margin>
+                                            <padding>
+                                                <Insets left="5.0" top="8.0"/>
+                                            </padding>
                                         </HBox>
-                                        <HBox layoutX="10.0" layoutY="218.0" prefHeight="80.0" prefWidth="200.0">
+                                        <HBox layoutX="10.0" layoutY="218.0" prefHeight="80.0" prefWidth="200.0"
+                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
                                             <children>
                                                 <VBox prefHeight="80.0" prefWidth="190.0">
                                                     <children>
                                                         <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" style="-fx-text-fill: #1e272e;"
+                                                               prefWidth="190.0" styleClass="gotoBlogPage"
+                                                               stylesheets="@../stylesheets/homePage.css"
                                                                text="Article Name">
                                                             <font>
                                                                 <Font size="16.0"/>
@@ -263,13 +290,18 @@
                                             <VBox.margin>
                                                 <Insets bottom="5.0" top="5.0"/>
                                             </VBox.margin>
+                                            <padding>
+                                                <Insets left="5.0" top="8.0"/>
+                                            </padding>
                                         </HBox>
-                                        <HBox layoutX="10.0" layoutY="128.0" prefHeight="80.0" prefWidth="200.0">
+                                        <HBox layoutX="10.0" layoutY="128.0" prefHeight="80.0" prefWidth="200.0"
+                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
                                             <children>
                                                 <VBox prefHeight="80.0" prefWidth="190.0">
                                                     <children>
                                                         <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" style="-fx-text-fill: #1e272e;"
+                                                               prefWidth="190.0" styleClass="gotoBlogPage"
+                                                               stylesheets="@../stylesheets/homePage.css"
                                                                text="Article Name">
                                                             <font>
                                                                 <Font size="16.0"/>
@@ -296,13 +328,18 @@
                                             <VBox.margin>
                                                 <Insets bottom="5.0" top="5.0"/>
                                             </VBox.margin>
+                                            <padding>
+                                                <Insets left="5.0" top="8.0"/>
+                                            </padding>
                                         </HBox>
-                                        <HBox layoutX="10.0" layoutY="218.0" prefHeight="80.0" prefWidth="200.0">
+                                        <HBox layoutX="10.0" layoutY="218.0" prefHeight="80.0" prefWidth="200.0"
+                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
                                             <children>
                                                 <VBox prefHeight="80.0" prefWidth="190.0">
                                                     <children>
                                                         <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" style="-fx-text-fill: #1e272e;"
+                                                               prefWidth="190.0" styleClass="gotoBlogPage"
+                                                               stylesheets="@../stylesheets/homePage.css"
                                                                text="Article Name">
                                                             <font>
                                                                 <Font size="16.0"/>
@@ -329,13 +366,18 @@
                                             <VBox.margin>
                                                 <Insets bottom="5.0" top="5.0"/>
                                             </VBox.margin>
+                                            <padding>
+                                                <Insets left="5.0" top="8.0"/>
+                                            </padding>
                                         </HBox>
-                                        <HBox layoutX="10.0" layoutY="308.0" prefHeight="80.0" prefWidth="200.0">
+                                        <HBox layoutX="10.0" layoutY="308.0" prefHeight="80.0" prefWidth="200.0"
+                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
                                             <children>
                                                 <VBox prefHeight="80.0" prefWidth="190.0">
                                                     <children>
                                                         <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" style="-fx-text-fill: #1e272e;"
+                                                               prefWidth="190.0" styleClass="gotoBlogPage"
+                                                               stylesheets="@../stylesheets/homePage.css"
                                                                text="Article Name">
                                                             <font>
                                                                 <Font size="16.0"/>
@@ -362,6 +404,9 @@
                                             <VBox.margin>
                                                 <Insets bottom="5.0" top="5.0"/>
                                             </VBox.margin>
+                                            <padding>
+                                                <Insets left="5.0" top="8.0"/>
+                                            </padding>
                                         </HBox>
                                     </children>
                                 </VBox>

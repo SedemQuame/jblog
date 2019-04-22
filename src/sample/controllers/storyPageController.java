@@ -22,6 +22,18 @@ import java.util.ResourceBundle;
 public class storyPageController implements Initializable {
 
     @FXML
+    private Button homepage;
+
+    @FXML
+    private Button storyboard;
+
+    @FXML
+    private Button storylist;
+
+    @FXML
+    private Button userlist;
+
+    @FXML
     private TextField storyTitle;
 
     @FXML
@@ -41,6 +53,34 @@ public class storyPageController implements Initializable {
 
     @FXML
     private Button submitStory;
+
+    @FXML
+    void gotoHomePage(ActionEvent event) {
+        loadStage("../fxml/homePage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
+
+    @FXML
+    void gotoStoryBoardPage(ActionEvent event) {
+        loadStage("../fxml/storyPage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
+
+    @FXML
+    void gotoStoryListPage(ActionEvent event) {
+        loadStage("../fxml/storyListPage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
+
+    @FXML
+    void gotoStoryUserPage(ActionEvent event) {
+        loadStage("../fxml/userListPage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
 
     @FXML
     void addNewStoryToDatabase(ActionEvent event) {

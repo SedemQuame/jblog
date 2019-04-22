@@ -2,11 +2,14 @@ package sample.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -26,10 +29,50 @@ public class userListPageController implements Initializable {
 
 
     @FXML
+    private Button homepage;
+
+    @FXML
+    private Button storyboard;
+
+    @FXML
+    private Button storylist;
+
+    @FXML
+    private Button userlist;
+
+    @FXML
     private VBox container;
 
     @FXML
     private TableView<User> userInfoTable;
+
+    @FXML
+    void gotoHomePage(ActionEvent event) {
+        loadStage("../fxml/homePage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
+
+    @FXML
+    void gotoStoryBoardPage(ActionEvent event) {
+        loadStage("../fxml/storyPage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
+
+    @FXML
+    void gotoStoryListPage(ActionEvent event) {
+        loadStage("../fxml/storyListPage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
+
+    @FXML
+    void gotoStoryUserPage(ActionEvent event) {
+        loadStage("../fxml/userListPage.fxml");
+        //      Hiding the stage.
+        ((Node) event.getSource()).getScene().getWindow().hide();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

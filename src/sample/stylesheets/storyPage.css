@@ -19,3 +19,14 @@
     -fx-text-fill: #576574;
     -fx-font-size: 14px;
 }
+
+.adminLinks {
+    -fx-background-color: #FF775F;
+    /*-fx-border-color: #FFFFFF;*/
+    -fx-pref-height: 190px;
+}
+
+.adminLinks:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #FF775F;
+}
