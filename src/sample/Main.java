@@ -44,7 +44,7 @@ public class Main extends Application {
          * */
 //        Parent root = FXMLLoader.load(getClass().getResource("Main.sample.fxml"));
 
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/storyPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/homePage.fxml"));
 
         primaryStage.setTitle("Sign Up Page");
         primaryStage.setScene(new Scene(root, 1100, 700));

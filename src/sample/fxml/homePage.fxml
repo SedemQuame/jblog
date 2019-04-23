@@ -2,7 +2,8 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="700.0"
@@ -28,22 +29,22 @@
                         <Font name="System Bold" size="13.0"/>
                     </font>
                 </Button>
-                <Button fx:id="homepage1" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
-                        onAction="#gotoHomePage" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                <Button fx:id="techCrunch" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryTemplate" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
                         stylesheets="@../stylesheets/storyPage.css" text="Tech Crunch" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="13.0"/>
                     </font>
                 </Button>
-                <Button fx:id="homepage11" layoutX="416.0" layoutY="20.0" mnemonicParsing="false"
-                        onAction="#gotoHomePage" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                <Button fx:id="bbc" layoutX="416.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
+                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
                         stylesheets="@../stylesheets/storyPage.css" text="BBC" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="13.0"/>
                     </font>
                 </Button>
-                <Button fx:id="homepage111" layoutX="536.0" layoutY="20.0" mnemonicParsing="false"
-                        onAction="#gotoHomePage" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                <Button fx:id="wsj" layoutX="536.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
+                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
                         stylesheets="@../stylesheets/storyPage.css" text="WSJ" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="13.0"/>
@@ -149,7 +150,8 @@
                                         <Insets right="50.0"/>
                                     </HBox.margin>
                                 </VBox>
-                                <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;">
+                                <VBox fx:id="jblogArticles" prefHeight="200.0" prefWidth="300.0"
+                                      style="-fx-background-color: white;">
                                     <children>
                                         <Label prefHeight="30.0" prefWidth="300.0" style="-fx-text-fill: #1e272e;"
                                                text="JBlog Stories">
@@ -180,234 +182,6 @@
                                                 <Insets bottom="15.0"/>
                                             </VBox.margin>
                                         </Separator>
-                                        <HBox prefHeight="80.0" prefWidth="200.0" styleClass="highLightArticle"
-                                              stylesheets="@../stylesheets/homePage.css">
-                                            <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0"/>
-                                            </VBox.margin>
-                                            <children>
-                                                <VBox prefHeight="80.0" prefWidth="190.0">
-                                                    <children>
-                                                        <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" styleClass="gotoBlogPage"
-                                                               stylesheets="@../stylesheets/homePage.css"
-                                                               text="Article Name">
-                                                            <font>
-                                                                <Font size="16.0"/>
-                                                            </font>
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
-                                                               maxHeight="30.0" prefHeight="15.0" prefWidth="190.0"
-                                                               style="-fx-text-fill: #485460;" text="Category"/>
-                                                    </children>
-                                                </VBox>
-                                                <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true"
-                                                           preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets/>
-                                                    </HBox.margin>
-                                                    <image>
-                                                        <Image url="@../image/imagePlaceholder.jpg"/>
-                                                    </image>
-                                                </ImageView>
-                                            </children>
-                                            <padding>
-                                                <Insets left="5.0" top="8.0"/>
-                                            </padding>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="123.0" prefHeight="80.0" prefWidth="200.0"
-                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
-                                            <children>
-                                                <VBox prefHeight="80.0" prefWidth="190.0">
-                                                    <children>
-                                                        <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" styleClass="gotoBlogPage"
-                                                               stylesheets="@../stylesheets/homePage.css"
-                                                               text="Article Name">
-                                                            <font>
-                                                                <Font size="16.0"/>
-                                                            </font>
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
-                                                               maxHeight="30.0" prefHeight="15.0" prefWidth="190.0"
-                                                               style="-fx-text-fill: #485460;" text="Category"/>
-                                                    </children>
-                                                </VBox>
-                                                <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true"
-                                                           preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets/>
-                                                    </HBox.margin>
-                                                    <image>
-                                                        <Image url="@../image/imagePlaceholder.jpg"/>
-                                                    </image>
-                                                </ImageView>
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets left="5.0" top="8.0"/>
-                                            </padding>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="218.0" prefHeight="80.0" prefWidth="200.0"
-                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
-                                            <children>
-                                                <VBox prefHeight="80.0" prefWidth="190.0">
-                                                    <children>
-                                                        <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" styleClass="gotoBlogPage"
-                                                               stylesheets="@../stylesheets/homePage.css"
-                                                               text="Article Name">
-                                                            <font>
-                                                                <Font size="16.0"/>
-                                                            </font>
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
-                                                               maxHeight="30.0" prefHeight="15.0" prefWidth="190.0"
-                                                               style="-fx-text-fill: #485460;" text="Category"/>
-                                                    </children>
-                                                </VBox>
-                                                <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true"
-                                                           preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets/>
-                                                    </HBox.margin>
-                                                    <image>
-                                                        <Image url="@../image/imagePlaceholder.jpg"/>
-                                                    </image>
-                                                </ImageView>
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets left="5.0" top="8.0"/>
-                                            </padding>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="128.0" prefHeight="80.0" prefWidth="200.0"
-                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
-                                            <children>
-                                                <VBox prefHeight="80.0" prefWidth="190.0">
-                                                    <children>
-                                                        <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" styleClass="gotoBlogPage"
-                                                               stylesheets="@../stylesheets/homePage.css"
-                                                               text="Article Name">
-                                                            <font>
-                                                                <Font size="16.0"/>
-                                                            </font>
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
-                                                               maxHeight="30.0" prefHeight="15.0" prefWidth="190.0"
-                                                               style="-fx-text-fill: #485460;" text="Category"/>
-                                                    </children>
-                                                </VBox>
-                                                <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true"
-                                                           preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets/>
-                                                    </HBox.margin>
-                                                    <image>
-                                                        <Image url="@../image/imagePlaceholder.jpg"/>
-                                                    </image>
-                                                </ImageView>
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets left="5.0" top="8.0"/>
-                                            </padding>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="218.0" prefHeight="80.0" prefWidth="200.0"
-                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
-                                            <children>
-                                                <VBox prefHeight="80.0" prefWidth="190.0">
-                                                    <children>
-                                                        <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" styleClass="gotoBlogPage"
-                                                               stylesheets="@../stylesheets/homePage.css"
-                                                               text="Article Name">
-                                                            <font>
-                                                                <Font size="16.0"/>
-                                                            </font>
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
-                                                               maxHeight="30.0" prefHeight="15.0" prefWidth="190.0"
-                                                               style="-fx-text-fill: #485460;" text="Category"/>
-                                                    </children>
-                                                </VBox>
-                                                <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true"
-                                                           preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets/>
-                                                    </HBox.margin>
-                                                    <image>
-                                                        <Image url="@../image/imagePlaceholder.jpg"/>
-                                                    </image>
-                                                </ImageView>
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets left="5.0" top="8.0"/>
-                                            </padding>
-                                        </HBox>
-                                        <HBox layoutX="10.0" layoutY="308.0" prefHeight="80.0" prefWidth="200.0"
-                                              styleClass="highLightArticle" stylesheets="@../stylesheets/homePage.css">
-                                            <children>
-                                                <VBox prefHeight="80.0" prefWidth="190.0">
-                                                    <children>
-                                                        <Label alignment="TOP_LEFT" maxHeight="30.0" prefHeight="15.0"
-                                                               prefWidth="190.0" styleClass="gotoBlogPage"
-                                                               stylesheets="@../stylesheets/homePage.css"
-                                                               text="Article Name">
-                                                            <font>
-                                                                <Font size="16.0"/>
-                                                            </font>
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0"
-                                                               maxHeight="30.0" prefHeight="15.0" prefWidth="190.0"
-                                                               style="-fx-text-fill: #485460;" text="Category"/>
-                                                    </children>
-                                                </VBox>
-                                                <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true"
-                                                           preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets/>
-                                                    </HBox.margin>
-                                                    <image>
-                                                        <Image url="@../image/imagePlaceholder.jpg"/>
-                                                    </image>
-                                                </ImageView>
-                                            </children>
-                                            <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets left="5.0" top="8.0"/>
-                                            </padding>
-                                        </HBox>
                                     </children>
                                 </VBox>
                             </children>

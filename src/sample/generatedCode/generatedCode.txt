@@ -1,0 +1,56 @@
+	
+/*Place this parts in a loop.*/
+	vBox7 = new VBox();
+        label16 = new Label();
+        label17 = new Label();
+        imageView4 = new ImageView();
+        hBox5 = new HBox();
+
+        vBox7.setPrefHeight(80.0);
+        vBox7.setPrefWidth(190.0);
+
+        label16.setAlignment(javafx.geometry.Pos.TOP_LEFT);
+        label16.setMaxHeight(30.0);
+        label16.setPrefHeight(15.0);
+        label16.setPrefWidth(190.0);
+        label16.getStyleClass().add("gotoBlogPage");
+        label16.getStylesheets().add("/sample/../stylesheets/homePage.css");
+        label16.setText("Article Name");
+        label16.setFont(new Font(16.0));
+        VBox.setMargin(label16, new Insets(0.0, 0.0, 5.0, 0.0));
+
+        label17.setAlignment(javafx.geometry.Pos.TOP_LEFT);
+        label17.setLayoutX(10.0);
+        label17.setLayoutY(10.0);
+        label17.setMaxHeight(30.0);
+        label17.setPrefHeight(15.0);
+        label17.setPrefWidth(190.0);
+        label17.setStyle("-fx-text-fill: #485460;");
+        label17.setText("Category");
+
+        imageView4.setFitHeight(80.0);
+        imageView4.setFitWidth(100.0);
+        imageView4.setPickOnBounds(true);
+        imageView4.setPreserveRatio(true);
+
+        HBox.setMargin(imageView4, new Insets(0.0));
+        imageView4.setImage(new Image(getClass().getResource("../image/imagePlaceholder.jpg").toExternalForm()));
+        VBox.setMargin(hBox5, new Insets(5.0, 0.0, 5.0, 0.0));
+        hBox5.setPadding(new Insets(8.0, 0.0, 0.0, 5.0));
+
+        hBox6.setLayoutX(10.0);
+        hBox6.setLayoutY(218.0);
+        hBox6.setPrefHeight(80.0);
+        hBox6.setPrefWidth(200.0);
+        hBox6.getStyleClass().add("highLightArticle");
+        hBox6.getStylesheets().add("/sample/../stylesheets/homePage.css");
+
+        hBox5.getChildren().add(vBox7);
+        hBox5.getChildren().add(imageView4);
+
+
+/*Will have to get the main hbox / vbox parent and add things
+*This can be done by using a the FXML Controller.
+*/
+/*===========================================================*/
+        hBox0.getChildren().add(vBox3);

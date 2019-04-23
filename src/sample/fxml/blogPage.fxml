@@ -22,23 +22,34 @@
                         <Font name="Bank Gothic Medium BT" size="25.0"/>
                     </font>
                 </Label>
-                <Label prefHeight="40.0" prefWidth="700.0" text="Page" textFill="WHITE">
+                <Button fx:id="homepage" mnemonicParsing="false" onAction="#gotoHomePage" prefHeight="50.0"
+                        prefWidth="160.0" styleClass="adminLinks" stylesheets="@../stylesheets/storyPage.css"
+                        text="Home" textAlignment="CENTER" textFill="WHITE">
                     <font>
-                        <Font size="18.0"/>
+                        <Font name="System Bold" size="13.0"/>
                     </font>
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
-                </Label>
-                <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="100.0" text="Home"
-                       textFill="WHITE">
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
+                </Button>
+                <Button fx:id="techCrunch" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryTemplate" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Tech Crunch" textFill="WHITE">
                     <font>
-                        <Font size="18.0"/>
+                        <Font name="System Bold" size="13.0"/>
                     </font>
-                </Label>
+                </Button>
+                <Button fx:id="bbc" layoutX="416.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
+                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="BBC" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="wsj" layoutX="536.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
+                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="WSJ" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
             </children>
             <BorderPane.margin>
                 <Insets/>
