@@ -56,7 +56,7 @@
             </BorderPane.margin>
         </HBox>
     </top>
-    <center>
+    <bottom>
         <ScrollPane prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: white;"
                     BorderPane.alignment="CENTER">
             <content>
@@ -64,7 +64,8 @@
                     <children>
                         <HBox prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: white;">
                             <children>
-                                <VBox prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: white;">
+                                <VBox fx:id="globalStories" prefHeight="550.0" prefWidth="550.0"
+                                      style="-fx-background-color: white;">
                                     <children>
                                         <ImageView fitHeight="350.0" fitWidth="550.0" pickOnBounds="true"
                                                    preserveRatio="true">
@@ -106,45 +107,6 @@
                                                 <Insets bottom="15.0"/>
                                             </VBox.margin>
                                         </Separator>
-                                        <HBox prefHeight="60.0" prefWidth="200.0">
-                                            <children>
-                                                <VBox prefHeight="0.0" prefWidth="400.0">
-                                                    <children>
-                                                        <Label prefHeight="20.0" prefWidth="400.0"
-                                                               style="-fx-background-color: white;" text="Story #1 ">
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font name="System Bold" size="13.0"/>
-                                                            </font>
-                                                        </Label>
-                                                        <Label prefHeight="15.0" prefWidth="400.0"
-                                                               style="-fx-background-color: white;" text="Label">
-                                                            <VBox.margin>
-                                                                <Insets bottom="5.0"/>
-                                                            </VBox.margin>
-                                                        </Label>
-                                                        <Label layoutX="10.0" layoutY="35.0" prefHeight="70.0"
-                                                               prefWidth="400.0" style="-fx-background-color: white;"
-                                                               text="Label"/>
-                                                    </children>
-                                                </VBox>
-                                                <VBox prefHeight="0.0" prefWidth="130.0">
-                                                    <HBox.margin>
-                                                        <Insets left="20.0"/>
-                                                    </HBox.margin>
-                                                    <children>
-                                                        <ImageView fitHeight="100.0" fitWidth="200.0"
-                                                                   pickOnBounds="true">
-                                                            <image>
-                                                                <Image url="@../image/imagePlaceholder.jpg"/>
-                                                            </image>
-                                                        </ImageView>
-                                                    </children>
-                                                </VBox>
-                                            </children>
-                                        </HBox>
                                     </children>
                                     <HBox.margin>
                                         <Insets right="50.0"/>
@@ -193,5 +155,5 @@
                 </VBox>
             </content>
         </ScrollPane>
-    </center>
+    </bottom>
 </BorderPane>

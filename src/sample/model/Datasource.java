@@ -223,9 +223,9 @@ public class Datasource {
     }
 
     /*Return A Searched User's Data*/
-    public Story queryStories(String storyCategory) {
+    public Story queryStories(String storyTitle) {
         try (Statement statement = conn.createStatement();
-             ResultSet results = statement.executeQuery(String.format("SELECT * FROM %s WHERE %s LIKE %%%s%%", TABLE_STORIES, COLUMN_CATEGORY, storyCategory))) {
+             ResultSet results = statement.executeQuery(String.format("SELECT * FROM %s WHERE %s LIKE %%%s%%", TABLE_STORIES, COLUMN_TITLE, storyTitle))) {
             if (results.next()) {
                 do return searchStory(results); while (results.next());
             }

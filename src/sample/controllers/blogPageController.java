@@ -46,7 +46,23 @@ public class blogPageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+//
+//        String storyTitle;
+//
+////        (Node)event.getSource())
+//
+////        Creating a database model.
+//        Datasource source = new Datasource();
+//
+////        Open database connection.
+//        source.open();
+//
+//        Story queriedStory = new Story();
+//
+//        queriedStory = source.queryStories(storyTitle);
+//
+////        Close database connection.
+//        source.close();
     }
 
     private void loadStage(String fxml) {

@@ -117,7 +117,7 @@ public class storyPageController implements Initializable {
                 }
 
 //           close database.
-                source.close();
+//                source.close();
 
                 /*Change scene.*/
                 /*=============*/
@@ -136,6 +136,7 @@ public class storyPageController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
     }
 
     public void loadStage(String fxml) {
@@ -143,7 +144,6 @@ public class storyPageController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-//            stage.getIcons().add(new Image("/home/icons/icon.png"));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         } catch (IOException event) {

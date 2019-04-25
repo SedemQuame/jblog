@@ -78,8 +78,7 @@ public class signUpPageController implements Initializable {
             if (pwsd.equals(confirmPswd) && pwsd.length() >= 8) {
                 Datasource source = new Datasource();
 //           open database.
-                source.open();
-
+//                source.open();
                 try {
                     Datasource.populateUsersTable(firstname, lastname, userage, email, phone, pwsd);
                 } catch (SQLException e) {
@@ -87,7 +86,7 @@ public class signUpPageController implements Initializable {
                 }
 
 //           close database.
-                source.close();
+//                source.close();
 
                 /*Change scene.*/
                 /*=============*/
