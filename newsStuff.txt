@@ -1,0 +1,88 @@
+
+        label0.setAlignment(javafx.geometry.Pos.BASELINE_LEFT);
+        label0.setId("storyTtileLabel");
+        label0.setPrefHeight(30.0);
+        label0.setPrefWidth(900.0);
+        label0.setStyle("-fx-text-fill: #1e272e;");
+        label0.getStylesheets().add("/com/company/../stylesheets/blogPage.css");
+        label0.setText("Story Title");
+        label0.setFont(new Font("Carlito", 25.0));
+        VBox.setMargin(label0, new Insets(5.0, 0.0, 5.0, 0.0));
+
+        imageView.setFitHeight(450.0);
+        imageView.setFitWidth(900.0);
+        imageView.setId("blogImageView");
+        imageView.setPickOnBounds(true);
+        VBox.setMargin(imageView, new Insets(0.0));
+        imageView.setImage(new Image(getClass().getResource("../image/imagePlaceholder.jpg").toExternalForm()));
+
+        label1.setAlignment(javafx.geometry.Pos.BASELINE_LEFT);
+        label1.setId("photoCreditLabel");
+        label1.setPrefHeight(15.0);
+        label1.setPrefWidth(900.0);
+        label1.setStyle("-fx-text-fill: #808e9b;");
+        label1.getStylesheets().add("/com/company/../stylesheets/blogPage.css");
+        label1.setText("Photo Credits");
+        VBox.setMargin(label1, new Insets(0.0, 0.0, 10.0, 0.0));
+
+        label2.setAlignment(javafx.geometry.Pos.TOP_LEFT);
+        label2.setId("introductionLabel");
+        label2.setLayoutX(10.0);
+        label2.setLayoutY(515.0);
+        label2.setPrefWidth(900.0);
+        label2.setStyle("-fx-text-fill: #808e9b;");
+        label2.getStyleClass().add("articleInformation");
+        label2.getStylesheets().add("/com/company/../stylesheets/blogPage.css");
+        label2.setText("intro");
+        label2.setWrapText(true);
+        VBox.setMargin(label2, new Insets(0.0, 0.0, 10.0, 0.0));
+        label2.setPadding(new Insets(0.0, 0.0, 10.0, 0.0));
+        label2.setFont(new Font(15.0));
+
+        label3.setAlignment(javafx.geometry.Pos.TOP_LEFT);
+        label3.setId("bodyLabel");
+        label3.setLayoutX(10.0);
+        label3.setLayoutY(542.0);
+        label3.setMinWidth(175.0);
+        label3.setPrefWidth(900.0);
+        label3.setStyle("-fx-text-fill: #808e9b;");
+        label3.getStyleClass().add("articleInformation");
+        label3.getStylesheets().add("/com/company/../stylesheets/blogPage.css");
+        label3.setText("body");
+        label3.setWrapText(true);
+        VBox.setMargin(label3, new Insets(0.0, 0.0, 10.0, 0.0));
+        label3.setPadding(new Insets(0.0, 0.0, 10.0, 0.0));
+        label3.setFont(new Font(15.0));
+
+        label4.setAlignment(javafx.geometry.Pos.TOP_LEFT);
+        label4.setId("conclusionLabel");
+        label4.setLayoutX(10.0);
+        label4.setLayoutY(568.0);
+        label4.setMinWidth(100.0);
+        label4.setPrefWidth(900.0);
+        label4.setStyle("-fx-text-fill: #808e9b;");
+        label4.getStyleClass().add("articleInformation");
+        label4.getStylesheets().add("/com/company/../stylesheets/blogPage.css");
+        label4.setText("conclusion");
+        label4.setWrapText(true);
+        VBox.setMargin(label4, new Insets(0.0, 0.0, 45.0, 0.0));
+        label4.setPadding(new Insets(0.0, 0.0, 10.0, 0.0));
+        label4.setFont(new Font(15.0));
+        BorderPane.setMargin(vBox, new Insets(0.0, 0.0, 0.0, 100.0));
+        borderPane.setCenter(vBox);
+        HBox.setMargin(borderPane, new Insets(0.0, 100.0, 0.0, 0.0));
+        scrollPane.setContent(hBox0);
+        setCenter(scrollPane);
+
+        hBox.getChildren().add(label);
+        hBox.getChildren().add(homepage);
+        hBox.getChildren().add(techCrunch);
+        hBox.getChildren().add(bbc);
+        hBox.getChildren().add(wsj);
+        vBox.getChildren().add(label0);
+        vBox.getChildren().add(imageView);
+        vBox.getChildren().add(label1);
+        vBox.getChildren().add(label2);
+        vBox.getChildren().add(label3);
+        vBox.getChildren().add(label4);
+        hBox0.getChildren().add(borderPane);

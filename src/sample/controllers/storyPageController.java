@@ -21,17 +21,17 @@ import java.util.ResourceBundle;
 
 public class storyPageController implements Initializable {
 
-    @FXML
-    private Button homepage;
-
-    @FXML
-    private Button storyboard;
-
-    @FXML
-    private Button storylist;
-
-    @FXML
-    private Button userlist;
+//    @FXML
+//    private Button homepage;
+//
+//    @FXML
+//    private Button storyboard;
+//
+//    @FXML
+//    private Button storylist;
+//
+//    @FXML
+//    private Button userlist;
 
     @FXML
     private TextField storyTitle;
@@ -117,7 +117,7 @@ public class storyPageController implements Initializable {
                 }
 
 //           close database.
-//                source.close();
+                source.close();
 
                 /*Change scene.*/
                 /*=============*/
@@ -136,10 +136,9 @@ public class storyPageController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
     }
 
-    public void loadStage(String fxml) {
+    private void loadStage(String fxml) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
             Stage stage = new Stage();
@@ -150,5 +149,6 @@ public class storyPageController implements Initializable {
             event.printStackTrace();
         }
     }
+
 }
 

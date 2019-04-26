@@ -16,7 +16,7 @@
 }
 
 #pageSummary {
-    -fx-text-fill: #576574;
+    /*-fx-text-fill: #576574;*/
     -fx-font-size: 14px;
 }
 

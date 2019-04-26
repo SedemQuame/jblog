@@ -32,7 +32,6 @@ public class loginPageController implements Initializable {
     @FXML
     private Button signupLink;
 
-
     @FXML
     void logUserIntoAccount(ActionEvent event) {
         System.out.println("Going to the user's account (i.e homePage.fxml)");
@@ -72,7 +71,6 @@ public class loginPageController implements Initializable {
         //      Hiding the stage.
         ((Node) event.getSource()).getScene().getWindow().hide();
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

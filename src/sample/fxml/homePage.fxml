@@ -31,21 +31,7 @@
                 </Button>
                 <Button fx:id="techCrunch" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
                         onAction="#gotoStoryTemplate" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
-                        stylesheets="@../stylesheets/storyPage.css" text="Tech Crunch" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="13.0"/>
-                    </font>
-                </Button>
-                <Button fx:id="bbc" layoutX="416.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
-                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
-                        stylesheets="@../stylesheets/storyPage.css" text="BBC" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="13.0"/>
-                    </font>
-                </Button>
-                <Button fx:id="wsj" layoutX="536.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
-                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
-                        stylesheets="@../stylesheets/storyPage.css" text="WSJ" textFill="WHITE">
+                        stylesheets="@../stylesheets/storyPage.css" text="World News" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="13.0"/>
                     </font>

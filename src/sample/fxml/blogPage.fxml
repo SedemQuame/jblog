@@ -2,10 +2,8 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="700.0"
             prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #FFFFFF;"
             stylesheets="@../stylesheets/blogPage.css" xmlns="http://javafx.com/javafx/10.0.1"
@@ -31,25 +29,12 @@
                 </Button>
                 <Button fx:id="techCrunch" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
                         onAction="#gotoStoryTemplate" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
-                        stylesheets="@../stylesheets/storyPage.css" text="Tech Crunch" textFill="WHITE">
+                        stylesheets="@../stylesheets/storyPage.css" text="World News" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="13.0"/>
                     </font>
                 </Button>
-                <Button fx:id="bbc" layoutX="416.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
-                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
-                        stylesheets="@../stylesheets/storyPage.css" text="BBC" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="13.0"/>
-                    </font>
-                </Button>
-                <Button fx:id="wsj" layoutX="536.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoStoryTemplate"
-                        prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
-                        stylesheets="@../stylesheets/storyPage.css" text="WSJ" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="13.0"/>
-                    </font>
-                </Button>
+
             </children>
             <BorderPane.margin>
                 <Insets/>
@@ -67,89 +52,8 @@
                     <children>
                         <BorderPane prefWidth="900.0" style="-fx-background-color: white;">
                             <center>
-                                <VBox prefWidth="1100.0" style="-fx-background-color: white;"
+                                <VBox fx:id="articleList" prefWidth="1100.0" style="-fx-background-color: white;"
                                       stylesheets="@../stylesheets/blogPage.css" BorderPane.alignment="CENTER">
-                                    <children>
-                                        <Label id="storyTtileLabel" alignment="BASELINE_CENTER" prefHeight="30.0"
-                                               prefWidth="900.0" style="-fx-text-fill: #1e272e;"
-                                               stylesheets="@../stylesheets/blogPage.css" text="Story Title">
-                                            <font>
-                                                <Font name="Carlito" size="25.0"/>
-                                            </font>
-                                            <VBox.margin>
-                                                <Insets bottom="5.0"/>
-                                            </VBox.margin>
-                                        </Label>
-                                        <Label id="storyPreviewLabel" alignment="BASELINE_CENTER" layoutX="10.0"
-                                               layoutY="10.0" prefHeight="20.0" prefWidth="900.0"
-                                               style="-fx-text-fill: #808e9b;"
-                                               stylesheets="@../stylesheets/blogPage.css"
-                                               text="Preview Of The Selected Story"/>
-                                        <ImageView id="blogImageView" fitHeight="450.0" fitWidth="900.0"
-                                                   pickOnBounds="true">
-                                            <VBox.margin>
-                                                <Insets/>
-                                            </VBox.margin>
-                                            <image>
-                                                <Image url="@../image/imagePlaceholder.jpg"/>
-                                            </image>
-                                        </ImageView>
-                                        <Label id="photoCreditLabel" alignment="BASELINE_CENTER" prefHeight="15.0"
-                                               prefWidth="900.0" style="-fx-text-fill: #808e9b;"
-                                               stylesheets="@../stylesheets/blogPage.css" text="Photo Credits">
-                                            <VBox.margin>
-                                                <Insets bottom="10.0"/>
-                                            </VBox.margin>
-                                        </Label>
-                                        <Label id="introductionLabel" alignment="TOP_LEFT" layoutX="10.0"
-                                               layoutY="515.0" prefWidth="900.0" style="-fx-text-fill: #808e9b;"
-                                               styleClass="articleInformation"
-                                               stylesheets="@../stylesheets/blogPage.css"
-                                               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                               wrapText="true">
-                                            <VBox.margin>
-                                                <Insets bottom="10.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets bottom="10.0"/>
-                                            </padding>
-                                            <font>
-                                                <Font size="15.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label id="bodyLabel" alignment="TOP_LEFT" layoutX="10.0" layoutY="542.0"
-                                               minWidth="175.0" prefWidth="900.0" style="-fx-text-fill: #808e9b;"
-                                               styleClass="articleInformation"
-                                               stylesheets="@../stylesheets/blogPage.css"
-                                               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                               wrapText="true">
-                                            <VBox.margin>
-                                                <Insets bottom="10.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets bottom="10.0"/>
-                                            </padding>
-                                            <font>
-                                                <Font size="15.0"/>
-                                            </font>
-                                        </Label>
-                                        <Label id="conclusionLabel" alignment="TOP_LEFT" layoutX="10.0" layoutY="568.0"
-                                               minWidth="100.0" prefWidth="900.0" style="-fx-text-fill: #808e9b;"
-                                               styleClass="articleInformation"
-                                               stylesheets="@../stylesheets/blogPage.css"
-                                               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                               wrapText="true">
-                                            <VBox.margin>
-                                                <Insets bottom="30.0"/>
-                                            </VBox.margin>
-                                            <padding>
-                                                <Insets bottom="10.0"/>
-                                            </padding>
-                                            <font>
-                                                <Font size="15.0"/>
-                                            </font>
-                                        </Label>
-                                    </children>
                                     <BorderPane.margin>
                                         <Insets left="100.0"/>
                                     </BorderPane.margin>
@@ -158,6 +62,35 @@
                             <HBox.margin>
                                 <Insets right="100.0"/>
                             </HBox.margin>
+                            <top>
+                                <HBox prefHeight="60.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Label prefHeight="30.0" prefWidth="120.0" text="News Source: ">
+                                            <HBox.margin>
+                                                <Insets left="5.0" right="5.0" top="30.0"/>
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="16.0"/>
+                                            </font>
+                                        </Label>
+                                        <ChoiceBox id="sources" fx:id="newsSource" prefHeight="30.0" prefWidth="500.0">
+                                            <HBox.margin>
+                                                <Insets right="15.0" top="30.0"/>
+                                            </HBox.margin>
+                                        </ChoiceBox>
+                                        <Button fx:id="changeNewsSourceBtn" mnemonicParsing="false"
+                                                onAction="#changeNewsSource" prefHeight="30.0" prefWidth="150.0"
+                                                text="Change Source">
+                                            <HBox.margin>
+                                                <Insets top="30.0"/>
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                    <BorderPane.margin>
+                                        <Insets left="200.0"/>
+                                    </BorderPane.margin>
+                                </HBox>
+                            </top>
                         </BorderPane>
                     </children>
                 </HBox>

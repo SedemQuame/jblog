@@ -9,7 +9,7 @@
 }
 
 .articleInformation {
-    -fx-font-size: 18px;
+    -fx-font-size: 15px;
 }
 
 #storyTitleLabel {
@@ -21,7 +21,7 @@
 }
 
 #blogImageView {
-    -fx-background-image: url("/sample/image/google.jpg");
+    -fx-background-image: url("/sample/image/heart.png");
 }
 
 #photoCreditLabel {

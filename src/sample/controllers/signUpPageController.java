@@ -112,7 +112,6 @@ public class signUpPageController implements Initializable {
 
     }
 
-
     @FXML
     public void gotoLoginPage(ActionEvent event) {
         System.out.println("Login Button Clicked.");
@@ -122,7 +121,6 @@ public class signUpPageController implements Initializable {
             ((Node) event.getSource()).getScene().getWindow().hide();
         }
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
