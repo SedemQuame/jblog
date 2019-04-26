@@ -86,7 +86,7 @@ public class homePageController implements Initializable, EventHandler<ActionEve
 //        Creating elements to add to the fxml Ui dynamically.
 //        ====================================================
 
-        for (int i = 0; i < stories.size(); i++) {
+        for (Story story : stories) {
 
             HBox hBox = new HBox();
 
@@ -108,8 +108,9 @@ public class homePageController implements Initializable, EventHandler<ActionEve
             articleName.setMaxWidth(190.0);
             articleName.getStyleClass().add("gotoBlogPage");
             articleName.getStylesheets().add("../stylesheets/homePage.css");
-            articleName.setText(stories.get(i).getTitle());
-            articleName.setFont(new Font(16.0));
+            articleName.setText(story.getTitle());
+            articleName.setFont(new Font("System Bold", 14.0));
+
 
 //           Adding events to the articleName label.
             articleName.setOnAction(this::handle);
@@ -124,7 +125,7 @@ public class homePageController implements Initializable, EventHandler<ActionEve
             categoryName.setPrefHeight(15.0);
             categoryName.setPrefWidth(190.0);
             categoryName.setStyle("-fx-text-fill: #485460;");
-            categoryName.setText(stories.get(i).getCategory());
+            categoryName.setText(story.getCategory());
 
             imageView.setFitHeight(80.0);
             imageView.setFitWidth(100.0);
@@ -180,10 +181,14 @@ public class homePageController implements Initializable, EventHandler<ActionEve
         List<sample.apis.stories> listOfStories = napi.getArticles();
         for (int x = 0; x < 15; x++) {
 //            Iterating through the stories.
-
             HBox hBox1 = new HBox();
             VBox vBox1 = new VBox();
-            Label storyTitleLabel = new Label();
+            Button storyTitleLabel = new Button();
+            storyTitleLabel.setAlignment(Pos.BASELINE_LEFT);
+            storyTitleLabel.getStyleClass().add("gotoBlogPage");
+            storyTitleLabel.getStylesheets().add("../stylesheets/homePage.css");
+
+
             Label storyDescriptionLabel = new Label();
             Label storyAuthorLabel = new Label();
             VBox vBox2 = new VBox();
@@ -200,12 +205,17 @@ public class homePageController implements Initializable, EventHandler<ActionEve
             storyTitleLabel.setStyle("-fx-background-color: white;");
             storyTitleLabel.setText(listOfStories.get(x).getTitle());
             VBox.setMargin(storyTitleLabel, new Insets(0.0, 0.0, 5.0, 0.0));
-            storyTitleLabel.setFont(new Font("System Bold", 13.0));
+            storyTitleLabel.setFont(new Font("System Bold", 14.0));
 
-            storyDescriptionLabel.setPrefHeight(15.0);
+//           Adding events to the articleName label.
+//           =======================================
+            storyTitleLabel.setOnAction(this::handle);
+
             storyDescriptionLabel.setPrefWidth(400.0);
             storyDescriptionLabel.setStyle("-fx-background-color: white;");
             storyDescriptionLabel.setText(listOfStories.get(x).getDescription());
+            storyDescriptionLabel.setWrapText(true);
+
             VBox.setMargin(storyDescriptionLabel, new Insets(0.0, 0.0, 5.0, 0.0));
 
             storyAuthorLabel.setLayoutX(10.0);
@@ -230,9 +240,8 @@ public class homePageController implements Initializable, EventHandler<ActionEve
             imageView0.setFitWidth(200.0);
             imageView0.setPickOnBounds(true);
 
-            Image image = new Image(listOfStories.get(x).getUrlToImage());
-            imageView0.setImage(image);
-
+//            Image image = new Image(listOfStories.get(x).getUrlToImage());
+//            imageView0.setImage(image);
             VBox.setMargin(hBox1, new Insets(0.0, 0.0, 10.0, 0.0));
 
 //            Adding imageView to Vbox2.
@@ -260,11 +269,11 @@ public class homePageController implements Initializable, EventHandler<ActionEve
         }
     }
 
-    public VBox getGlobalStories() {
+    private VBox getGlobalStories() {
         return globalStories;
     }
 
-    public VBox getJblogArticles() {
+    private VBox getJblogArticles() {
         return jblogArticles;
     }
 }
