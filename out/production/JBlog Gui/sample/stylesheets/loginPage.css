@@ -1,0 +1,10 @@
+.loginButtons {
+    -fx-background-color: #FF775F;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    /*-fx-font-family: ;*/
+}
+
+.loginButtons:hover {
+    -fx-background-color: #FF9683;
+}

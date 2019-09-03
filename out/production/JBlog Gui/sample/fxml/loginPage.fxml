@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="700.0"
+            prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="sample.controllers.loginPageController">
+    <top>
+        <HBox id="header" prefHeight="50.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="50.0" prefWidth="1100.0" spacing="3.0">
+                    <children>
+                        <Label alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="1100.0"
+                               style="-fx-text-fill: #F9F9F9;" text="Join JBlog">
+                            <font>
+                                <Font name="Bank Gothic Medium BT" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="25.0" prefWidth="1100.0"
+                               style="-fx-text-fill: #F9F9F9;" text="The Best Blogging Management System In CPEN">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <padding>
+                        <Insets top="7.0"/>
+                    </padding>
+                </VBox>
+            </children>
+            <stylesheets>
+                <URL value="@../stylesheets/general.css"/>
+                <URL value="@../stylesheets/signup.css"/>
+            </stylesheets>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="500.0" prefWidth="1100.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="350.0" right="350.0"/>
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="30.0" top="50.0"/>
+            </padding>
+            <children>
+                <Label alignment="BASELINE_CENTER" prefHeight="17.0" prefWidth="400.0" styleClass="sectionHeaders"
+                       text="Log In">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="50.0"/>
+                    </VBox.margin>
+                    <stylesheets>
+                        <URL value="@../stylesheets/general.css"/>
+                        <URL value="@../stylesheets/loginPage.css"/>
+                    </stylesheets>
+                </Label>
+                <Label prefHeight="17.0" prefWidth="400.0" text="Email Address"/>
+                <TextField fx:id="emailAddress" promptText="eg: sedemQuame@uselessmail.com"/>
+                <Label layoutX="11.0" layoutY="41.0" prefHeight="17.0" prefWidth="400.0" text="Password"/>
+                <TextField fx:id="password" layoutX="11.0" layoutY="58.0">
+                    <VBox.margin>
+                        <Insets bottom="30.0"/>
+                    </VBox.margin>
+                </TextField>
+                <Button fx:id="loginUser" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                        onAction="#logUserIntoAccount" prefWidth="120.0" styleClass="loginButtons"
+                        stylesheets="@../stylesheets/loginPage.css" text="Log in" textAlignment="RIGHT">
+                    <VBox.margin>
+                        <Insets left="140.0"/>
+                    </VBox.margin>
+                </Button>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="15.0" top="15.0"/>
+                    </VBox.margin>
+                </Separator>
+                <Label alignment="BASELINE_CENTER" prefWidth="400.0" text="Don't Have An Account?"/>
+                <Button fx:id="signupLink" alignment="BASELINE_CENTER" mnemonicParsing="false"
+                        onAction="#gotoSignUpPage" prefWidth="120.0" styleClass="loginButtons"
+                        stylesheets="@../stylesheets/loginPage.css" text="Sign Up" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="15.0" left="140.0"/>
+                    </VBox.margin>
+                </Button>
+                <Separator layoutX="10.0" layoutY="336.0" prefWidth="200.0"/>
+                <Label alignment="BASELINE_CENTER" layoutX="10.0" layoutY="374.0" prefWidth="400.0"
+                       text="Forgot Password?">
+                    <VBox.margin>
+                        <Insets top="15.0"/>
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="resetPasswordBtn" alignment="BASELINE_CENTER" layoutX="150.0" layoutY="396.0"
+                        mnemonicParsing="false" onAction="#gotoForgotPasswordPage" prefWidth="120.0"
+                        styleClass="loginButtons" stylesheets="@../stylesheets/loginPage.css" text="Reset Password"
+                        textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets left="140.0"/>
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox prefHeight="50.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="BASELINE_CENTER" prefHeight="50.0" prefWidth="1100.0"
+                       style="-fx-background-color: white;" text="Made with love by sedem"/>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

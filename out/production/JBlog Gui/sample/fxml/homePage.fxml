@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="700.0"
+            prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #FFFFFF;"
+            stylesheets="@../stylesheets/homePage.css" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="sample.controllers.homePageController">
+    <top>
+        <HBox id="header" prefHeight="50.0" prefWidth="1100.0" stylesheets="@../stylesheets/general.css"
+              BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="100.0" right="100.0" top="10.0"/>
+            </padding>
+            <children>
+                <Label prefHeight="40.0" prefWidth="100.0" text="JBLOG" textFill="WHITE">
+                    <font>
+                        <Font name="Bank Gothic Medium BT" size="25.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="homepage" mnemonicParsing="false" onAction="#gotoHomePage" prefHeight="50.0"
+                        prefWidth="160.0" styleClass="adminLinks" stylesheets="@../stylesheets/storyPage.css"
+                        text="Home" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="techCrunch" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryTemplate" prefHeight="50.0" prefWidth="160.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="World News" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <bottom>
+        <ScrollPane prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: white;"
+                    BorderPane.alignment="CENTER">
+            <content>
+                <VBox prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: white;">
+                    <children>
+                        <HBox prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: white;">
+                            <children>
+                                <VBox fx:id="globalStories" prefHeight="550.0" prefWidth="550.0"
+                                      style="-fx-background-color: white;">
+                                    <children>
+                                        <ImageView fitHeight="350.0" fitWidth="550.0" pickOnBounds="true"
+                                                   preserveRatio="true">
+                                            <image>
+                                                <Image url="@../image/imagePlaceholder.jpg"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label prefHeight="30.0" prefWidth="550.0" style="-fx-text-fill: #1e272e;"
+                                               text="Automatically Chosen Story (Main Story)">
+                                            <font>
+                                                <Font name="Cambria Bold" size="25.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label prefHeight="20.0" prefWidth="550.0" style="-fx-text-fill: #485460;"
+                                               text="Story Extract">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label prefHeight="15.0" prefWidth="500.0" style="-fx-text-fill: #808e9b;"
+                                               text="Story Arthur"/>
+                                        <Label layoutX="10.0" layoutY="427.0" prefHeight="15.0" prefWidth="500.0"
+                                               text="Latest Global Stories.">
+                                            <VBox.margin>
+                                                <Insets top="30.0"/>
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="11.0"/>
+                                            </font>
+                                        </Label>
+                                        <Separator prefWidth="200.0">
+                                            <VBox.margin>
+                                                <Insets bottom="15.0"/>
+                                            </VBox.margin>
+                                        </Separator>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets right="50.0"/>
+                                    </HBox.margin>
+                                </VBox>
+                                <VBox fx:id="jblogArticles" prefHeight="200.0" prefWidth="300.0"
+                                      style="-fx-background-color: white;">
+                                    <children>
+                                        <Label prefHeight="30.0" prefWidth="300.0" style="-fx-text-fill: #1e272e;"
+                                               text="JBlog Stories">
+                                            <font>
+                                                <Font name="Cambria Bold" size="20.0"/>
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="300.0"
+                                               style="-fx-text-fill: #485460;" text="Page Name">
+                                            <font>
+                                                <Font name="Cambria" size="15.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="300.0"
+                                               style="-fx-text-fill: #1e272e;" text="OTHER TOPICS">
+                                            <font>
+                                                <Font name="Cambria" size="15.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="5.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Separator prefWidth="200.0">
+                                            <VBox.margin>
+                                                <Insets bottom="15.0"/>
+                                            </VBox.margin>
+                                        </Separator>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets left="100.0" right="100.0"/>
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </bottom>
+</BorderPane>

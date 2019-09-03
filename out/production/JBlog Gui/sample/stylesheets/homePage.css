@@ -1,0 +1,13 @@
+.gotoBlogPage {
+    -fx-text-fill: #1e272e;
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 0;
+}
+
+.gotoBlogPage:hover {
+    -fx-text-fill: #FF775F;
+}
+
+.highLightArticle:hover {
+    -fx-border-radius: 5px;
+}

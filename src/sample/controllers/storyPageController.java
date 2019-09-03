@@ -76,9 +76,7 @@ public class storyPageController implements Initializable {
 
         File file = chooser.showOpenDialog(null);
 
-        if (file != null) {
-            imageUrl.setText(file.getAbsolutePath());
-        }
+        if (file != null) imageUrl.setText(file.getAbsolutePath());
     }
 
     @FXML

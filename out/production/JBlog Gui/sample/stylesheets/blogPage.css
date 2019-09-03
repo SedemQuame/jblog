@@ -1,0 +1,41 @@
+/* Arthur: Sedem Quame Amekpewu
+*Date: 12th April, 2019
+*Description: This is a simple CSS script, that would be used in styling
+              the blogPageController.sample.fxml markup file.
+              Coloring scheme will be taking from adobe color.
+*/
+#header {
+
+}
+
+.articleInformation {
+    -fx-font-size: 15px;
+}
+
+#storyTitleLabel {
+
+}
+
+#storyPreviewLabel {
+
+}
+
+#blogImageView {
+    -fx-background-image: url("/sample/image/heart.png");
+}
+
+#photoCreditLabel {
+
+}
+
+#introductionLabel {
+
+}
+
+#bodyLabel {
+
+}
+
+#conclusionLabel {
+
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700" maxWidth="1100" minHeight="700" minWidth="1100"
+            prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="sample.controllers.storyListPageController">
+    <top>
+        <HBox id="header" prefHeight="50.0" prefWidth="1100.0" stylesheets="@../stylesheets/general.css"
+              BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="100.0" right="100.0" top="10.0"/>
+            </padding>
+            <children>
+                <Label prefHeight="30.0" prefWidth="110.0" text="JBLOG" textFill="WHITE">
+                    <font>
+                        <Font name="Bank Gothic Medium BT" size="25.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="homepage" layoutX="216.0" layoutY="20.0" mnemonicParsing="false" onAction="#gotoHomePage"
+                        prefHeight="50.0" prefWidth="200.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Home" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="storyboard" mnemonicParsing="false" onAction="#gotoStoryBoardPage" prefHeight="50.0"
+                        prefWidth="200.0" styleClass="adminLinks" stylesheets="@../stylesheets/storyPage.css"
+                        text="StoryBoard" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="storylist" layoutX="216.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryListPage" prefHeight="50.0" prefWidth="200.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Stories" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="userlist" layoutX="368.0" layoutY="20.0" mnemonicParsing="false"
+                        onAction="#gotoStoryUserPage" prefHeight="50.0" prefWidth="200.0" styleClass="adminLinks"
+                        stylesheets="@../stylesheets/storyPage.css" text="Users" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane maxWidth="1100" minWidth="1100" prefWidth="1100.0" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="container" prefHeight="700.0" prefWidth="1100.0">
+                    <padding>
+                        <Insets left="100.0" right="100.0"/>
+                    </padding>
+                    <children>
+                        <Label prefHeight="30.0" prefWidth="900.0" text="JBLOG Story List.">
+                            <VBox.margin>
+                                <Insets top="30.0"/>
+                            </VBox.margin>
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <TableView fx:id="storyInfoTable" prefWidth="900.0">
+                            <VBox.margin>
+                                <Insets top="10.0"/>
+                            </VBox.margin>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
